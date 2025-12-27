@@ -7,7 +7,7 @@ import string
 
 def generate_password(
     alphabet: str = string.ascii_letters + string.digits,
-    special_chars: string = "!@#$%^&*()_+=-`~.,",
+    special_chars: str = "!@#$%^&*()_+=-`~.,",
     minimum_length: int = 15,
     maximum_length: int = 30,
     copy_to_clipboard: bool = True,
@@ -61,8 +61,5 @@ def generate_password(
             return password
 
 if __name__ == "__main__":
-    special_chars = "!$#@^&*,.+=~"
-    alphabet = string.ascii_letters + string.digits + special_chars
-
     password = generate_password()
     print(f"Generated password: {password}")
